@@ -9,9 +9,9 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
-const upload = multer({ dest: "uploads/" })
+const upload = multer({ dest: "uploads" })
 
-const CHUNK_DIR = "chunks/"
+const CHUNK_DIR = "chunks"
 app.get("/", (req, res) => {
   res.send("hello world")
 })
