@@ -12,6 +12,9 @@ app.use(bodyParser.json())
 const upload = multer({ dest: "uploads/" })
 
 const CHUNK_DIR = "chunks/"
+app.get("/", (req, res) => {
+  res.send("hello world")
+})
 
 // 处理文件上传请求
 app.post("/upload", upload.single("file"), (req, res) => {
